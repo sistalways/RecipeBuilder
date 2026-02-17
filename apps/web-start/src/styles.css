@@ -1,15 +1,102 @@
 @import "tailwindcss";
 
+/* ========== BASE ========== */
 body {
-    @apply m-0;
-    font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", "Roboto", "Oxygen",
-        "Ubuntu", "Cantarell", "Fira Sans", "Droid Sans", "Helvetica Neue",
-        sans-serif;
-    -webkit-font-smoothing: antialiased;
-    -moz-osx-font-smoothing: grayscale;
-}
-
-code {
-    font-family: source-code-pro, Menlo, Monaco, Consolas, "Courier New",
-        monospace;
-}
+    margin: 0;
+    font-family: 'Inter', sans-serif;
+    background: linear-gradient(135deg, #f0fdf4, #dcfce7);
+    color: #064e3b;
+  }
+  
+  /* ========== MAIN LAYOUT ========== */
+  .MainContent {
+    min-height: 100vh;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+  }
+  
+  /* ========== HERO SECTION ========== */
+  .AppTheme {
+    text-align: center;
+    max-width: 700px;
+  }
+  
+  .AppHeading {
+    font-size: 3rem;
+    font-weight: 800;
+    color: #065f46;
+  }
+  
+  .AppDesc {
+    font-size: 1.2rem;
+    margin-top: 1rem;
+    color: #047857;
+  }
+  
+  /* ========== LOGIN BUTTON ========== */
+  .LoginButton a {
+    margin-top: 2rem;
+    display: inline-block;
+    text-decoration: none;
+    background: #22c55e;
+    color: white;
+    padding: 0.9rem 2.2rem;
+    border-radius: 999px;
+    font-weight: 600;
+    box-shadow: 0 10px 20px rgba(34, 197, 94, 0.25);
+    transition: 0.3s ease;
+  }
+  
+  .LoginButton a:hover {
+    background: #16a34a;
+    transform: translateY(-2px);
+  }
+  
+  /* ========== NAVIGATION ========== */
+  .NavigationLinks {
+    display: flex;
+    gap: 2rem;
+    justify-content: center;
+    background: white;
+    padding: 1.2rem 2rem;
+    border-radius: 14px;
+    box-shadow: 0 8px 24px rgba(0, 0, 0, 0.08);
+    margin-top: 2rem;
+  }
+  
+  .NavigationLinks a {
+    text-decoration: none;
+    color: #065f46;
+    font-weight: 600;
+    position: relative;
+  }
+  
+  .NavigationLinks a::after {
+    content: "";
+    position: absolute;
+    width: 0%;
+    height: 2px;
+    background: #22c55e;
+    left: 0;
+    bottom: -4px;
+    transition: 0.3s;
+  }
+  
+  .NavigationLinks a:hover::after {
+    width: 100%;
+  }
+  
+  /* ========== DASHBOARD CONTENT ========== */
+  .DashboardContent {
+    margin-top: 3rem;
+    background: white;
+    padding: 3rem;
+    border-radius: 20px;
+    font-size: 1.8rem;
+    font-weight: 700;
+    color: #065f46;
+    box-shadow: 0 10px 30px rgba(0, 0, 0, 0.08);
+    text-align: center;
+  }
